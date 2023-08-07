@@ -95,6 +95,10 @@ app.get('/api/users/:_id/logs', function (req, res) {
   });
 });
 
+app.get('/api/users', function (req, res) {
+  res.json(users);
+});
+
 const listener = app.listen(process.env.PORT || 3000, () => {
   console.log('Your app is listening on port ' + listener.address().port);
 });
